@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Your JavaScript goes here!
+    
+    function game (){
+
+
+for (let i = 0; i < 5; i++) {
+   playround();
+  // if (gameResult == 'win'){
+    // let scoreWins=0; scoreWins++
+    // console.log(scoreWins);
+   }
+   // function playRound(playerSelection, computerSelection) {
+
+//}
+//function player selection 
+//prompt players to ask player selection
+
+
+function playround (){
+const playerChoice = prompt("Please choose! Paper, Rock, or Scissors?")
+console.log(playerChoice);
+
+  // computer play
+  //function computerSelection
+// select a random number times 100
+ //function computerSelection ($computerPick)  {
+   
+
+  
+  const computerNum = Math.random()*100;
+  
+
+
+// if n<=33 = rock
+  if ((computerNum) < 33)   {
+  computerPick = 'rock';
+
+}
+else if ((computerNum) > 66){
+  computerPick = 'scissors';
+
+}
+//if n>=66 = scissors
+//else = paper
+else{
+computerPick = 'paper';
+}
+console.log(computerPick);
+// return result to computer selection
+
+//function playround (){
+  let gameResult;
+if (playerChoice === 'rock' && computerPick==='rock') {
+  gameResult = 'tie'
+  console.log(gameResult);
+}
+else if (playerChoice === 'rock' && computerPick==='paper') {
+  gameResult= 'lose'
+ console.log(gameResult);
+}
+else if (playerChoice=== 'rock' && computerPick==='scissors'){
+  gameResult= 'win'
+  console.log(gameResult);
+}
+else if (playerChoice === 'paper' && computerPick==='rock') {
+  gameResult= "win"
+  console.log('you win mother fucker');
+}
+else if (playerChoice === 'paper' && computerPick==='paper') {
+  gmaeResult= 'tie'
+ console.log("this is a tie");
+}
+else if (playerChoice==='paper' && computerPick=== 'scissors'){
+  gameResult= 'lose'
+  console.log('you lose bitch');
+}
+else if (playerChoice === 'scissors' && computerPick==='rock') {
+  gameResult= 'lose'
+  console.log('you lose bitch');
+}
+else if (playerChoice === 'scissors' && computerPick==='paper') {
+  gameResult = 'win'
+ console.log("you win mother fucker");
+}
+else if (playerChoice==='scissors' && computerPick=== 'scissors'){
+  gameResult = 'tie'
+  console.log('this is a tie');}
+}
+let wins = 0;
+if (gameResult== 'win'){
+  wins++;
+  
+  console.log(wins);
+}
+
+
+}
+
+
+game();
+
+
+  </script>
+</body>
+
+</html>
